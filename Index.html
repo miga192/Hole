@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hole - Golf Resort Dubai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #f3f7f0; /* Light greenish background */
+            color: #2e4d24; /* Dark green text */
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+		
+	
+        /* Header */
+        header {
+            background-color: #3b7a57;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img.logo {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        header nav ul li a:hover {
+            color: #a9f1b7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('file:///C|/Users/Polina.Shmakova/Downloads/golf-course.jpg'); /* Add path to banner image */
+            background-size: cover;
+            background-position: center;
+            padding: 150px 20px;
+            text-align: center;
+            color: #ffffff;
+			display: relative;
+			left:300px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #5cb85c;
+            color: #ffffff;
+            padding: 15px 25px;
+            border: none;
+            font-size: 1em;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #4ca64c;
+        }
+
+        /* Sections Styling */
+        section {
+            padding: 50px 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #3b7a57;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #2e4d24;
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Facilities Section */
+        #facilities ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0;
+            text-align: left;
+        }
+
+        #facilities ul li {
+            background-color: #e0f2e0;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        /* Package Section */
+        .package {
+            background-color: #e6f4e6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .package h3 {
+            color: #2e4d24;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #f3f7f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #2e4d24;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #5cb85c;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #4ca64c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3b7a57;
+            color: #ffffff;
+            padding: 30px 0;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        footer .contact-info, footer .social-links, footer .footer-nav {
+            margin: 15px 0;
+        }
+
+        footer .contact-info p {
+            margin: 5px 0;
+        }
+
+        .social-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links li a {
+            color: #ffffff;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .social-links li a:hover {
+            color: #a9f1b7;
+        }
+
+        .footer-nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-nav li {
+            margin: 0 15px;
+        }
+
+        .footer-nav li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .footer-nav li a:hover {
+            color: #a9f1b7;
+        }
+
+        .bottom-line {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #d1e5d6;
+        }
+		.picture{width:100%;
+			     height:600px;
+			     background-image:url("file:///C|/Users/Polina.Shmakova/Downloads/golf bg.jpg");
+			     background-size:cover;}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="file:///C|/Users/Polina.Shmakova/Downloads/Green Cream Bold Illustrative Golf Club Logo.png" alt="Hole Logo" class="logo">
+        <h1>Hole - Golf Resort Dubai</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#packages">Packages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+	<div class="picture">
+	  <div class="hero">
+            <h2 style="color:white;">Welcome to Hole - Dubai's Premier Golf Resort</h2>
+            <pstyle="color:white;">Enjoy world-class golfing experiences, luxurious accommodations, and more!</p>
+            <a href="#packages" class="cta-button">Explore Packages</a>
+        </div>
+	</div>
+    
+      
+
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Hole Golf Resort</h2>
+            <p>Located in the heart of Dubai, Hole Golf Resort offers three championship golf courses, luxurious hotel accommodations, two clubhouses, and top-tier dining experiences.</p>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities">
+        <div class="container">
+            <h2>Facilities</h2>
+            <ul>
+                <li>Three championship golf courses including the famous Sea View course</li>
+                <li>Two clubhouses</li>
+                <li>Hotel accommodation</li>
+                <li>Restaurants and café</li>
+                <li>Pro shop</li>
+                <li>Other activities like golf lessons, digital coaching, and caddie service</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <div class="container">
+            <h2>Personalized Packages</h2>
+            <div class="package">
+                <h3>Five Rounds Package</h3>
+                <p>Includes five-night stay, five 18-hole rounds, and a complimentary coaching session.</p>
+            </div>
+            <div class="package">
+                <h3>Triple Tee Package</h3>
+                <p>Perfect for a weekend getaway, including three-night stay and three rounds.</p>
+            </div>
+            <div class="package">
+                <h3>One Day Pass</h3>
+                <p>Enjoy a full day of golfing at any course with exclusive access to the clubhouse.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+          <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Golf Lane, Dubai, UAE</p>
+                <p><i class="fas fa-phone-alt"></i> +971 555 1234 567</p>
+                <p><i class="fas fa-envelope"></i> info@holedubai.com</p>
+            </div>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#packages">Packages</a></li>
+            </ul>
+            <p class="bottom-line">&copy; 2023 Hole - Golf Resort Dubai. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
